@@ -1,0 +1,7 @@
+{
+  "name": "FocoLedControl",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
