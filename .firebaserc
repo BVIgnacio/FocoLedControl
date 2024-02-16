@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "controlleds-bfa79": {
+      "hosting": {
+        "app": [
+          "controlleds-bfa79"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "controlleds-bfa79"
+  }
+}

@@ -1,20 +1,58 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<ion-toolbar color="primary"> <!-- Cambia el color del encabezado según tu tema -->
+  <ion-title class="titulo">Control de Luces</ion-title> <!-- Título del encabezado -->
+</ion-toolbar>
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="horizontal-container">
+    <div class="centrado">
+      <ion-card class="contenido">
+        <ion-button class="boton-redondo" fill="outline" (click)="encenderLedUno()" [color]="colorBotonEncendido(controlLed)">
+          <ion-icon slot="start" name="sunny" [color]="colorBotonEncendido(controlLed)"></ion-icon>
+        </ion-button>
+ON
+        <ion-button class="boton-redondo" fill="outline" (click)="apagarLedUno()" [color]="colorBotonApagado(ledUnoEncendido)">
+          <ion-icon slot="start" name="moon" [color]="colorBotonApagado(ledUnoEncendido)"></ion-icon>
+        </ion-button>
+        OFF
+      </ion-card>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="centrado">
+      <ion-card class="contenido">
+        <ion-button class="boton-redondo" fill="outline" (click)="encenderLedDos()" [color]="colorBotonEncendido(ledDosEncendido)">
+          <ion-icon slot="start" name="sunny" [color]="colorBotonEncendido(ledDosEncendido)"></ion-icon>
+        </ion-button>
+ON
+        <ion-button class="boton-redondo" fill="outline" (click)="apagarLedDos()" [color]="colorBotonApagado(ledTresEncendido)">
+          <ion-icon slot="start" name="moon" [color]="colorBotonApagado(ledTresEncendido)"></ion-icon>
+        </ion-button>
+        OFF
+      </ion-card>
+    </div>
+
+    <div class="centrado">
+      <ion-card class="contenido">
+        <ion-button class="boton-redondo" fill="outline" (click)="encenderLedTres()" [color]="colorBotonEncendido(ledCuatroEncendido)">
+          <ion-icon slot="start" name="sunny" [color]="colorBotonEncendido(ledCuatroEncendido)"></ion-icon>
+        </ion-button>ON
+
+        <ion-button class="boton-redondo" fill="outline" (click)="apagarLedTres()" [color]="colorBotonApagado(ledCincoEncendido)">
+          <ion-icon slot="start" name="moon" [color]="colorBotonApagado(ledCincoEncendido)"></ion-icon>
+        </ion-button>OFF
+      </ion-card>
+    </div>
+
+    <div class="centrado">
+      <ion-card class="contenido">
+        <ion-button fill="outline" (click)="encenderTodosLeds()" [color]="colorBotonEncendido(todosEncendidos)">
+          <ion-icon [color]="colorBotonEncendido(todosEncendidos)"></ion-icon>
+          Todo Encendido
+        </ion-button>
+
+        <ion-button fill="outline" (click)="apagarTodosLeds()" [color]="colorBotonApagado(todosApagados)">
+          <ion-icon [color]="colorBotonApagado(todosApagados)"></ion-icon>
+          Todo Apagado
+        </ion-button>
+      </ion-card>
+    </div>
   </div>
 </ion-content>
